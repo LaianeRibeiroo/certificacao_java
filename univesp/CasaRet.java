@@ -6,7 +6,9 @@ class CasaRet {
 	   static >> a classe não precisa ser instanciada para chamar o método
 	   void >> este método não possui retorno */ 
 	   
-	   // declarando as variaveis do método 
+	   	//declarando as variaveis que serão utilizadas no cauculo; 
+		double raio =2;
+		double areap;
 		float lateral = 10 ; // comprimento da lateral da cabana
 		float cquarto = 7; // comprimento da lateral do quarto
 		float  areaq; // área do quarto
@@ -32,5 +34,12 @@ class CasaRet {
 		
         // saida no terminal informando a area total
 		System.out.println("A área total é " + areat);
+		
+	
+		// operação de cauculo da area utilizando o pi e potencia da biblioteca math do java; 
+		areap = Math.PI * Math.pow(raio,2);
+		
+		//saida no terminal informando a area
+		System.out.println ("area: " + areap);
 	}
 }
