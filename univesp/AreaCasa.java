@@ -15,7 +15,7 @@ class AreaCasa { //método de cauculo da area da piscina;
 		areas = lateral * lateral;
 		System.out.println("A área da sala é " + areas);
       
-		areaq = cquarto* (lateral/2); // areaq = 7 * 5;
+		areaq = cquarto* (lateral/2); // areaq = 7 * 5;;
 		
 		// saida no terminal informando as areas
 		System.out.println("A área do quarto é " + areaq);
