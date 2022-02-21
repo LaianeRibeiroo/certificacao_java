@@ -1,10 +1,14 @@
 class AreaCasa { //método de cauculo da area da piscina;
-		
+	
+	static double valorM2 = 1500;  // declarando variavel global de metrosquadrados. 
+
+	
 	static void areacasa( float lateral, float cquarto){  //inicializando método com passagem de parametros. 
 	
 	float  areaq; // área do quarto
 	float  areas; // área da sala
 	float  areat; // área total
+	
 	
         System.out.println("Programa para cálculo da área da casa");
 			
@@ -27,6 +31,10 @@ class AreaCasa { //método de cauculo da area da piscina;
 		//retorno do método
 		return Math.PI * Math.pow(raio,2);	
 				
+	}
+	
+	static double valor (double area){
+		return (valorM2*area); // o valor M2 é acessado globalmente. 
 	}
 		
 	
