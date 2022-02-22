@@ -8,7 +8,7 @@ class AreaCasa { //método de cauculo da area da piscina;
 	float  areaq; // área do quarto
 	float  areas; // área da sala
 	float  areat; // área total
-	
+	 
 	
         System.out.println("Programa para cálculo da área da casa");
 			
@@ -34,15 +34,25 @@ class AreaCasa { //método de cauculo da area da piscina;
 	}
 	
 	static double valor (double area){
-		return (valorM2*area); // o valor M2 é acessado globalmente. 
+		if (area >= 0 ){ // testando se a area é positiva, se sim, o cauculo será executado
+		 return (valorM2*area); 	
+		}
+		return (-1); 
 	}
 		
 	
 	public static void main(String[] args) { // declarando método main para execução do código 
 	   double areap; 
 	   areacasa(11,7); // chamada e passagem de parametros lateral e cquarto
-	   	   areap = areaPiscina (2); // chamada e passagem de  parametro
+	   
+	   areap = areaPiscina (2); // chamada e passagem de  parametro
 	   System.out.println (" ... " + areap);
-	    
+	   
+	   double preco = valor (-20);
+	   if (preco >= 0){ // testando parametros
+	     System.out.println ("O valor da construcao e:  " + preco);
+	   }
+	   else
+		 System.out.println ("Valor de area negativo");
 	}
 }
