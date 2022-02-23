@@ -42,17 +42,14 @@ class AreaCasa { //método de cauculo da area da piscina;
 		
 	
 	public static void main(String[] args) { // declarando método main para execução do código 
-	   double areap; 
-	   areacasa(11,7); // chamada e passagem de parametros lateral e cquarto
+	
+	   double preco; 
+	   boolean valorOK = false;
+	   preco = valor(20); 
 	   
-	   areap = areaPiscina (2); // chamada e passagem de  parametro
-	   System.out.println (" ... " + areap);
-	   
-	   double preco = valor (-20);
-	   if (preco >= 0){ // testando parametros
-	     System.out.println ("O valor da construcao e:  " + preco);
-	   }
-	   else
-		 System.out.println ("Valor de area negativo");
+	   //  if (preco >= 0) valorOK = true; // testando a saida com boolean (valores lógicos) 
+	   valorOK = preco >= 0;
+	     if (valorOK) System.out.println (" O valor da construcao e  " + preco);  // testanto textos para unuarios. 
+	     else System.out.println (" Valor de area negativo ");    
+		}  
 	}
-}
