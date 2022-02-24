@@ -5,12 +5,9 @@ class AreaCasa { //método de cauculo da area da piscina;
 	
 	static void areacasa( float lateral, float cquarto){  //inicializando método com passagem de parametros. 
 	
-	float  areaq; // área do quarto
-	float  areas; // área da sala
-	float  areat; // área total
-	 
-	
-        System.out.println("Programa para cálculo da área da casa");
+	float  areaq, areas, areat; // área do quarto, sala e total;
+    
+	    System.out.println("Programa para cálculo da área da casa");
 			
 		areas = lateral * lateral;
 		System.out.println("A área da sala é " + areas);
@@ -27,10 +24,12 @@ class AreaCasa { //método de cauculo da area da piscina;
 	}
 	
 	static double areaPiscina (double raio) { // método de cauculo da area da piscina, com passagem do parametro
-	
-		//retorno do método
-		return Math.PI * Math.pow(raio,2);	
-				
+		double resp;
+		  if (raio >= 0) // ?
+			resp = Math.PI * Math.pow(raio,2); // :
+		  else resp = -1;
+	return (resp);
+			
 	}
 	
 	static double valor (double area){
