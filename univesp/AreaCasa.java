@@ -27,17 +27,19 @@ class AreaCasa { //método de cauculo da area da piscina;
 	}
 	
 	    static double valorPiscina(double area, int material){
-			double valor = 0; 
-		switch (material){
+	
+		    switch (material){
 			case ALVENARIA: return (area*1500);
             case VINIL: return (area*1100);			               
 			case FIBRA: return (area*750);			               
 		    case PLASTICO: return (area*500);			               
 		    default: return (-1);
+		    }
 		}
 	   	
 	static double areaPiscina (double raio, int material) { // método de cauculo da area da piscina, com passagem do parametro
 		double valor;
+		double resp;
 		double area = 100;
 		  if (raio >= 0) // ?
 			resp = Math.PI * Math.pow(raio,2); // :
@@ -53,14 +55,13 @@ class AreaCasa { //método de cauculo da area da piscina;
 		
 	
 	public static void main(String[] args) { // declarando método main para execução do código 
-	
-	   double preco; 
-	   boolean valorOK = false;
-	   preco = valor(20); 
-	   
-	   //  if (preco >= 0) valorOK = true; // testando a saida com boolean (valores lógicos) 
-	   valorOK = preco >= 0;
-	     if (valorOK) System.out.println (" O valor da construcao e  " + preco);  // testanto textos para unuarios. 
-	     else System.out.println (" Valor de area negativo ");    
-		}  
+	 double area = 100;
+	 int tipo = ALVENARIA;
+	 System.out.println("Material \t Valor");
+	 while (tipo <= PLASTICO){
+		  System.out.println(tipo + "\t\t" + valorPiscina(area,tipo));
+		  tipo = tipo+1;
+	      }
+	  
+		
 	}
