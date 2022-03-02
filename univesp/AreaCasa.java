@@ -8,7 +8,7 @@ class AreaCasa { //método de cauculo da area da piscina;
 	
 	static void areacasa( float lateral, float cquarto){  //inicializando método com passagem de parametros. 
 	
-	float  areaq, areas, areat; // área do quarto, sala e total;
+	    float  areaq, areas, areat; // área do quarto, sala e total;
     
 	    System.out.println("Programa para cálculo da área da casa");
 			
@@ -26,25 +26,26 @@ class AreaCasa { //método de cauculo da area da piscina;
     	System.out.println("A área total é " + areat); // saida no terminal informando a area total
 	}
 	
-	    static double valorPiscina(double area, int material){
-	
-		    switch (material){
-			case ALVENARIA: return (area*1500);
-            case VINIL: return (area*1100);			               
-			case FIBRA: return (area*750);			               
-		    case PLASTICO: return (area*500);			               
-		    default: return (-1);
-		    }
+	static double valorPiscina(double area, int material){
+	    switch (material){
+		case ALVENARIA: return (area*1500);
+        case VINIL: return (area*1100);			               
+		case FIBRA: return (area*750);			               
+		case PLASTICO: return (area*500);			               
+		default: return (-1);
 		}
+	}
 	   	
 	static double areaPiscina (double raio, int material) { // método de cauculo da area da piscina, com passagem do parametro
 		double valor;
 		double resp;
 		double area = 100;
-		  if (raio >= 0) // ?
-			resp = Math.PI * Math.pow(raio,2); // :
-		  else resp = -1;
-		}
+		if (raio >= 0) {
+		 resp = Math.PI * Math.pow(raio,2); 
+		} 
+		else resp = -1;
+		return resp;
+	}
 	
 	static double valor (double area){
 		if (area >= 0 ){ // testando se a area é positiva, se sim, o cauculo será executado
@@ -55,13 +56,16 @@ class AreaCasa { //método de cauculo da area da piscina;
 		
 	
 	public static void main(String[] args) { // declarando método main para execução do código 
-	 double area = 100;
-	 int tipo = ALVENARIA;
+	 double area = 50 ;
+	 int tipo ;
 	 System.out.println("Material \t Valor");
-	 while (tipo <= PLASTICO){
-		  System.out.println(tipo + "\t\t" + valorPiscina(area,tipo));
+	 while (area <=200){
+		 tipo = ALVENARIA;
+		 	 while (tipo <= PLASTICO){
+		     System.out.println(area + "\t" + tipo + "\t\t" + valorPiscina(area,tipo));
 		  tipo = tipo+1;
-	      }
-	  
-		
-	}
+	        }
+     area = area + 50;
+	    }
+    }
+}
