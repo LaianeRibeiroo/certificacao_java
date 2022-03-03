@@ -56,10 +56,11 @@ class AreaCasa { //método de cauculo da area da piscina;
 		
 	
 	public static void main(String[] args) { // declarando método main para execução do código 
-	 double area = 100 ;
-	 System.out.println("Material \t Valor");
-	for(int tipo = ALVENARIA;tipo <= PLASTICO; tipo = tipo+1){
-		System.out.println(tipo + "\t" + valorPiscina(area,tipo));
-		}
-    }
+	int a;
+	int b;
+	for (a=1, b=4; a<b; a++, b--){
+		System.out.println("a = " + a);
+		System.out.println("b = " + b);
+        }
+	}
 }
