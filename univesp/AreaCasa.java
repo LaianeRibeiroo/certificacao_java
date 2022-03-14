@@ -27,13 +27,18 @@ class AreaCasa { //método de cauculo da area da piscina;
 	}
 	
 	static double valorPiscina(double area, int material){
-	    switch (material){
+	   /* switch (material){
 		case ALVENARIA: return (area*1500);
         case VINIL: return (area*1100);			               
 		case FIBRA: return (area*750);			               
 		case PLASTICO: return (area*500);			               
 		default: return (-1);
-		}
+		*/ 
+		if (material <ALVENARIA || material > PLASTICO || AREA < 0)
+			return (-1)
+		
+		
+		}return (area*precos[material];
 	}
 	   	
 	static double areaPiscina (double raio, int material) { // método de cauculo da area da piscina, com passagem do parametro
@@ -54,13 +59,32 @@ class AreaCasa { //método de cauculo da area da piscina;
 		return (-1); 
 	}
 		
-	
-	public static void main(String[] args) { // declarando método main para execução do código 
-	int a;
-	int b;
-	for (a=1, b=4; a<b; a++, b--){
-		System.out.println("a = " + a);
-		System.out.println("b = " + b);
-        }
+		
+    static double media(double [] arranjo){ //metodo de caulculo da média
+		double resp=0;
+		for (double valor: arranjo){
+		resp += valor;	
+		}
+	    	return (resp/arranjo.length); 
 	}
+	
+	
+	/* public static void main(String[] args) { 
+	double [] precos2 = new double [4];
+	
+	precos2[ALVENARIA] = 1500;
+	precos2[VINIL] = 1100;
+	precos2[FIBRA] = 750;
+	precos2[PLASTICO] = 500; */
+	
+	 static char [][] nomes = 
+	   {{'A','l','v','e','n','a','r','i','a'}
+		{'V','i','n','i','l'}
+		{'F','i','b','r','a'}
+		{'P','l','á','s','t','i','c','o'}
+	   };
+	public static void main(String[] args) { 
+    system.out.println (nomes.length);
+	system.out.println (nomes[0].length);
+
 }
