@@ -1,10 +1,12 @@
-class AreaCasa { //método de cauculo da area da piscina;
+class AreaCasa { 
 	
-	static double valorM2 = 1500;  // declarando variavel global de metrosquadrados. 
-    static final int ALVENARIA = 0; // declarando constanstes
+	static double valorM2 = 1500;  
+    static final int ALVENARIA = 0; 
 	static final int VINIL = 1;
 	static final int FIBRA = 2;
 	static final int PLASTICO = 3;
+	
+    static double [] precos = {1500, 1100, 750, 500};
 	
 	static void areacasa( float lateral, float cquarto){  //inicializando método com passagem de parametros. 
 	
@@ -26,22 +28,22 @@ class AreaCasa { //método de cauculo da area da piscina;
     	System.out.println("A área total é " + areat); // saida no terminal informando a area total
 	}
 	
-	static double valorPiscina(double area, int material){
-	   /* switch (material){
+	 /* static double valorPiscina(double area, int material){
+	   switch (material){
 		case ALVENARIA: return (area*1500);
         case VINIL: return (area*1100);			               
 		case FIBRA: return (area*750);			               
 		case PLASTICO: return (area*500);			               
 		default: return (-1);
-		*/ 
+	
 		if (material <ALVENARIA || material > PLASTICO || AREA < 0)
-			return (-1)
+			return (-1);
 		
 		
-		}return (area*precos[material];
-	}
+		}return (area*precos[material]; 	*/ 
+	
 	   	
-	static double areaPiscina (double raio, int material) { // método de cauculo da area da piscina, com passagem do parametro
+	static double areaPiscina (double raio, int material) { 
 		double valor;
 		double resp;
 		double area = 100;
@@ -77,14 +79,11 @@ class AreaCasa { //método de cauculo da area da piscina;
 	precos2[FIBRA] = 750;
 	precos2[PLASTICO] = 500; */
 	
-	 static char [][] nomes = 
-	   {{'A','l','v','e','n','a','r','i','a'}
-		{'V','i','n','i','l'}
-		{'F','i','b','r','a'}
-		{'P','l','á','s','t','i','c','o'}
-	   };
-	public static void main(String[] args) { 
-    system.out.println (nomes.length);
-	system.out.println (nomes[0].length);
-
-}
+     public static void main(String[] args) { 
+      double [] precos = {1500, 1100, 750, 500};
+         for (int i = 0; i<4 ; i++){
+	        System.out.println(precos [i]);
+	      }
+	  } 
+	}
+	 
