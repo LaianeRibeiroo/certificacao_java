@@ -13,13 +13,13 @@ class AreaCasa {
     static double [] precos = {1500, 1100, 750, 500};
 	
 	//Area da casa
-	static void areacasa( float lateral, float cquarto){  //inicializando método com passagem de parametros. 
+	static void areacasa( float lateral, float cquarto){  
 	
-	    float  areaq, areas, areat; // área do quarto, sala e total;
+	    float  areaq, areas, areat; 
         System.out.println("Programa para cálculo da área da casa");
 		areas = lateral * lateral;
 		System.out.println("A área da sala é " + areas);
-      	areaq = cquarto* (lateral/2); // areaq = 7 * 5;;
+      	areaq = cquarto* (lateral/2); 
 		System.out.println("A área do quarto é " + areaq);
 		System.out.println("A área do banheiro é " + areaq);
         areat = areas + 2 * areaq; 
@@ -52,9 +52,9 @@ class AreaCasa {
 		return (-1); 
 	}
 		
-	//metodo de caulculo da média	
+	//metodo de caulculo da média usando arranjo
     static double media(double [] arranjo){ 
-		double resp=0;
+		double resp = 0;
 		for (double valor: arranjo){
 		resp += valor;	
 		}
@@ -63,9 +63,9 @@ class AreaCasa {
 	
 	
      //Cauculo da area usando arranjo	
-     public static void main(String[] args) { 
+      public static void main(String[] args) { 
       double [] precos = {1500, 1100, 750, 500};
-         for (int i = 0; i<4 ; i++){
+         for (int i = ALVENARIA; i<PLASTICO ; i++){
 	        System.out.println(precos [i]);
 	      }
 	  } 
