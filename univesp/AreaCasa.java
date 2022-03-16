@@ -62,12 +62,22 @@ class AreaCasa {
 	}
 	
 	
-     //Cauculo da area usando arranjo	
+    /* //Cauculo da area usando arranjo	
       public static void main(String[] args) { 
       double [] precos = {1500, 1100, 750, 500};
          for (int i = ALVENARIA; i<PLASTICO ; i++){
 	        System.out.println(precos [i]);
 	      }
 	  } 
+	 */  
+	 public static void main(String [] args) {
+        double media = 0;
+        for (int i=0; i<4; i++) {
+          media += precos[i] ;
+        }
+        media = media / 4;
+        System.out.println (" A média das areas é  " + media);
+	 }
+	  
 	}
 	 
