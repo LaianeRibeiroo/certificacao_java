@@ -1,4 +1,4 @@
-class AreaCasa { 
+﻿class AreaCasa { 
 	
 	//Valor do metro quadrado
 	static double valorM2 = 1500;  
@@ -61,23 +61,18 @@ class AreaCasa {
 	    	return (resp/arranjo.length); 
 	}
 	
-	
-    /* //Cauculo da area usando arranjo	
-      public static void main(String[] args) { 
-      double [] precos = {1500, 1100, 750, 500};
-         for (int i = ALVENARIA; i<PLASTICO ; i++){
-	        System.out.println(precos [i]);
-	      }
-	  } 
-	 */  
-	 public static void main(String [] args) {
-        double media = 0;
-        for (int i=0; i<4; i++) {
-          media += precos[i] ;
-        }
-        media = media / 4;
-        System.out.println (" A média das areas é  " + media);
-	 }
+	//nome dos materiais 	     
+    static char [][] nomes = {
+	    {'A','l','v','e','n','a','r','i','a'},
+		{'V','i','n','i','l'},
+		{'F','i','b','r','a'},
+		{'P','l','á','s','t','i','c','o'}
+	   };
+	public static void main(String[] args) { 
+     System.out.println (nomes.length);
+	 System.out.println (nomes[0].length);
+    }
+}
 	  
-	}
+
 	 
