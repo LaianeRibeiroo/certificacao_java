@@ -71,6 +71,12 @@
 	public static void main(String[] args) { 
      System.out.println (nomes.length);
 	 System.out.println (nomes[0].length);
+	 
+	for (int i=0; i<4; i++){
+	 System.out.println (nomes[i].length);
+	 System.out.println (" ");
+	}
+	System.out.println;
     }
 }
 	  
