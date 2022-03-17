@@ -1,4 +1,4 @@
-﻿class AreaCasa { 
+ class AreaCasa { 
 	
 	//Valor do metro quadrado
 	static double valorM2 = 1500;  
@@ -66,17 +66,17 @@
 	    {'A','l','v','e','n','a','r','i','a'},
 		{'V','i','n','i','l'},
 		{'F','i','b','r','a'},
-		{'P','l','á','s','t','i','c','o'}
+		{'P','l','a','s','t','i','c','o'}
 	   };
 	public static void main(String[] args) { 
      System.out.println (nomes.length);
 	 System.out.println (nomes[0].length);
 	 
-	for (int i=0; i<4; i++){
-	 System.out.println (nomes[i].length);
+	for (char [] nome :nomes){
+	 System.out.println (nome.length);
 	 System.out.println (" ");
 	}
-	System.out.println;
+	System.out.println();
     }
 }
 	  
