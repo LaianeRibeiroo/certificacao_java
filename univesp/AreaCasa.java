@@ -61,24 +61,33 @@
 	    	return (resp/arranjo.length); 
 	}
 	
-	//nome dos materiais 	     
-    static char [][] nomes = {
-	    {'A','l','v','e','n','a','r','i','a'},
-		{'V','i','n','i','l'},
-		{'F','i','b','r','a'},
-		{'P','l','a','s','t','i','c','o'}
-	   };
-	public static void main(String[] args) { 
-     System.out.println (nomes.length);
-	 System.out.println (nomes[0].length);
-	 
-	for (char [] nome :nomes){
-	 System.out.println (nome.length);
-	 System.out.println (" ");
-	}
-	System.out.println();
-    }
+      public static void carregaval(double[][]m){
+        for (int i=0; i<m.length; i++){
+          for (int j=50; j<=200; j+=50){
+             m[i][j/ 50-1] = precos [i] * j;
+          }
+        }
+	
 }
-	  
+      public static void main(String[] args) { 
+       double [] [] valores = new double[4][4];
+       carregaval(valores);
+	      for (int i=0; i<valores.length; i++){
+            for (int j=0; j<valores [i].length ;j++)
+             System.out.println(valores [i][j] + " ");
+		    System.out.println();
+          }
+		  for (double [] linha: valores){
+			for (double valor: linha)
+				System.out.print(valor + " ");
+			 System.out.println();
+		  }
+		System.out.println("Piscina de plastico de 150 m2: " + valores[PLASTICO] [2]);
+		System.out.println("Piscina de Fibra de 150 m2: " + valores[FIBRA] [2]);
+        }
+        
+       
+
+}
 
 	 
