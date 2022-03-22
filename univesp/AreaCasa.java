@@ -67,26 +67,36 @@
              m[i][j/ 50-1] = precos [i] * j;
           }
         }
-	
-}
+      }
+       public static double[][]cauculaFinal(double [][] val,double [][] desc){
+	      double [][] saida = new double [val.length] [val[0].length];
+		  for (int i=0; i<saida.length; i++){
+			  for (int j=0; i<saida[0].length; j++){
+			saida [i][j] = val [i][j] * (1-desc[i][j]);
+	          }
+	      }
+		  return(saida);
+	    }
+		  
+	   
+	   
+
       public static void main(String[] args) { 
-       double [] [] valores = new double[4][4];
-       carregaval(valores);
-	      for (int i=0; i<valores.length; i++){
-            for (int j=0; j<valores [i].length ;j++)
-             System.out.println(valores [i][j] + " ");
-		    System.out.println();
-          }
-		  for (double [] linha: valores){
+       double [][] valores = new double[4][4];
+       double [][] descontos = { 
+		   {0,0,0.2,0.2},
+		   {0.05,0.05,0.1,0.15},
+		   {0.02,0.04,0.08,0.16},
+	       {0,0,0,0.05}};
+	   double [][] pFinal;
+	   carregaval(valores);
+	   pFinal = cauculaFinal(valores,descontos);
+	      for (double [] linha: valores){
 			for (double valor: linha)
-				System.out.print(valor + " ");
+				System.out.print(valor + " | ");
 			 System.out.println();
 		  }
-		System.out.println("Piscina de plastico de 150 m2: " + valores[PLASTICO] [2]);
-		System.out.println("Piscina de Fibra de 150 m2: " + valores[FIBRA] [2]);
-        }
-        
-       
+	  }    
 
 }
 
