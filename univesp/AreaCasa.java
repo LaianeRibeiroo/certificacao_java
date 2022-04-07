@@ -2,7 +2,7 @@
  sala de 10x10m, um banheiro e um quarto de 5x7m cada. */ 
  
  
- class AreaCasa { 
+ class AreaCasa{ 
 	
 	//Valor do metro quadrado da casa
 	static double valorM2 = 1500;  
@@ -13,13 +13,16 @@
 	float areaq;
 	float areas; 
 	float areat; 
+	}
 	
 	//calculo da area
-	static double area (double lateral, double cquarto){
-		 if (lateral>=0 && cquarto >=0{
-			 areat = lateral * lateral; 
-			 areat += cquarto * lateral; 
-		 } return (areat);
+	static double area(double lateral, double cquarto){
+		 double areat = -1; // area total
+		 if (lateral>=0 && cquarto >=0){
+			 areat = lateral*lateral; 
+			 areat += cquarto*lateral; 
+		 } 
+		 return (areat);
 	}
 	
   
@@ -30,7 +33,8 @@
 		}
 		return (-1); 
 	}
-		
+	
+  /*	
 	//metodo de caulculo da média usando arranjo
     static double media(double [] arranjo){ 
 		double resp = 0;
@@ -47,7 +51,7 @@
           }
         }
       }
-      
+    
       double[][] calculaFinal(double[][] val, double[][] desc){
         double[][] saida = new double[val.length][val[0].length];
 
@@ -71,7 +75,7 @@
 		  }
 		}
 	
-	
+	*/
 	
 }
 

@@ -12,23 +12,30 @@ class AreaPiscina {
 	//Preços dos materiais
     static double [] precos = {1500, 1100, 750, 500};
 	
-	//nomes dos materiais 
-	static char [][] nomes = 
-	 {{'A','l','v','e','n','a','r','i','a'}
-	 {'V','i','n','i','l'}
-	 {'F','i','b','r','a'}
-	 {'P','l','á','s','t','i','c','o'}};
+	 // Nomes dos materiais
+    static char[][] nomes = {
+        {'A', 'l', 'v', 'e', 'n', 'a', 'r', 'i', 'a'},
+        {'V', 'i', 'n', 'i', 'l'},
+        {'F', 'i', 'b', 'r', 'a'},
+        {'P', 'l', 'a', 's', 't', 'i', 'c', 'o'}
+    };
 	
 	// cauculo da area total   	
-	static double areaPiscina (double raio, int material) { 
-	 return(raio >= 0) ?
-	  Math.PI * Math.pow(raio,2):-1; 
-		} 
+	static double area(double raio){
+    return (raio >= 0 ? (Math.PI * Math.pow(raio, 2)) : -1);
+    }
+	
+	
 	// valor do metro de acordo com o material 
 	static double valorPiscina(double area, int material){
-	 if (material <ALVENARIA || material > PLASTICO || area < 0)
-	  return (-1);
-		 return (area * precos[material]); 	
-	}
+       if(material < ALVENARIA || material > PLASTICO || area < 0)
+           return(-1);
+       return (area * precos[material]);
+    }
+	
+	public static void main(String[] args){
+        // testes
+
+    }
 		
 }
