@@ -1,22 +1,29 @@
 //calcula a area de uma casa com piscina
 
 class projeto{
+	
+	Residencia[] condominio;
+     int ultimo = -1; // Último concominio
+
+     boolean adicionaRes(Residencia r){
+      if(this.ultimo < this.condominio.length-1){
+      ultimo++;
+      this.condominio[ultimo] = r;
+      return true;
+      }
+      return false;
+	 }
+
+     projeto(int tam){
+      condominio = new Residencia[tam];
+     }
+	
+	
    public static void main(String[] args) {
         
-        double valorM2_ant = AreaCasa.valorM2;
-         
-		 // preço casa 1 
-         System.out.println(AreaCasa.valor(AreaCasa.area(15,10)));
-		 
-		 //novo valor do m2
-		 AreaCasa.valorM2 = 1270;
-		 
-		 // preço casa 2 
-	     System.out.println(AreaCasa.valor(AreaCasa.area(18,8)));
-		 
-		 // restaura valor 
-		 AreaCasa.valorM2 = valorM2_ant;
-		 
-     }
-
- }
+     projeto proj = new projeto(3);
+	  for (Residencia re : proj.condominio){
+	    System.out.println("Endereço do objeto:  " + re); 
+	  } 	 
+   }
+}
